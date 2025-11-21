@@ -265,7 +265,7 @@ const Contact = () => {
                   </motion.a>
                 ))}
               </div>
-              <p className="text-black-300 mt-4 text-sm">
+              <p className="text-white mt-4 text-sm">
                 Follow us on social media for updates, projects, and industry insights
               </p>
             </motion.div>

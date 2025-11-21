@@ -85,7 +85,7 @@ const Blog = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Latest from Our Blog
           </h2>
-          <p className="text-xl text-black-500 max-w-3xl mx-auto">
+          <p className="text-xl text-white max-w-3xl mx-auto">
             Stay updated with industry insights, project updates, and expert advice from WBM Contracting
           </p>
         </motion.div>

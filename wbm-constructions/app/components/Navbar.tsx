@@ -39,11 +39,10 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
           ? 'bg-dark/95 backdrop-blur-md shadow-lg shadow-gold/10'
           : 'bg-transparent'
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
@@ -53,7 +52,7 @@ const Navbar = () => {
             className="flex-shrink-0"
           >
             <Image
-              src="/logo.jpg"
+              src="/logo.png"
               alt="WBM Contracting"
               width={120}
               height={60}
