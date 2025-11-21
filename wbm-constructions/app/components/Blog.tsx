@@ -69,7 +69,7 @@ const Blog = () => {
   ];
 
   return (
-    <section id="blog" className="py-24 md:py-32 lg:py-40 bg-gradient-to-b from-dark via-dark-light to-dark">
+    <section id="blog" className="py-12 md:py-16 lg:py-20 bg-gradient-to-b from-dark via-dark-light to-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div

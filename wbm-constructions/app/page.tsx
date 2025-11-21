@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Navbar />
-      <div className="space-y-16 md:space-y-20 lg:space-y-24">
+      <div className="space-y-0">
         <Hero />
         <About />
         <Services />

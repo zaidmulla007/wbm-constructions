@@ -51,7 +51,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-24 md:py-32 lg:py-40 bg-gradient-to-b from-dark via-dark-light to-dark">
+    <section id="services" className="py-12 md:py-16 lg:py-20 bg-gradient-to-b from-dark via-dark-light to-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -67,7 +67,7 @@ const Services = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Comprehensive Construction Solutions
           </h2>
-          <p className="text-xl text-black-300 max-w-3xl mx-auto">
+          <p className="text-xl text-white max-w-3xl mx-auto">
             From concept to completion, we offer a full range of construction services tailored to your needs
           </p>
         </motion.div>
