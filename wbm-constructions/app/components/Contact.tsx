@@ -56,7 +56,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-white via-gray-50 to-white">
+    <section id="contact" className="py-24 md:py-32 lg:py-40 bg-gradient-to-b from-white via-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -64,7 +64,7 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-16 md:mb-20 lg:mb-24"
         >
           <span className="inline-block px-4 py-2 bg-gold/10 border border-gold rounded-full text-gold font-semibold text-sm tracking-wider mb-4">
             GET IN TOUCH
@@ -77,14 +77,14 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-white p-8 rounded-2xl shadow-xl"
+            className="bg-white p-8 md:p-10 lg:p-12 rounded-2xl shadow-xl"
           >
             <h3 className="text-2xl font-bold text-dark mb-6">Send us a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -195,7 +195,7 @@ const Contact = () => {
             className="space-y-8"
           >
             {/* Info Cards */}
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-2 gap-6 md:gap-8 lg:gap-10">
               {contactInfo.map((info, index) => (
                 <motion.a
                   key={index}

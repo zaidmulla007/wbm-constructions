@@ -43,9 +43,9 @@ const Footer = () => {
       <div className="absolute top-0 right-0 w-64 h-64 bg-gold/5 rounded-full -translate-y-32 translate-x-32 blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-gold/5 rounded-full translate-y-32 -translate-x-32 blur-3xl"></div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 lg:py-24">
         {/* Top Section */}
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12 mb-12">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-10 md:gap-12 lg:gap-14 mb-12 md:mb-16 lg:mb-20">
           {/* Company Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

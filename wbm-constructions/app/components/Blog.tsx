@@ -69,7 +69,7 @@ const Blog = () => {
   ];
 
   return (
-    <section id="blog" className="py-20 bg-gradient-to-b from-dark via-dark-light to-dark">
+    <section id="blog" className="py-24 md:py-32 lg:py-40 bg-gradient-to-b from-dark via-dark-light to-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -77,7 +77,7 @@ const Blog = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-16 md:mb-20 lg:mb-24"
         >
           <span className="inline-block px-4 py-2 bg-gold/10 border border-gold rounded-full text-gold font-semibold text-sm tracking-wider mb-4">
             INSIGHTS & NEWS
@@ -96,7 +96,7 @@ const Blog = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-12"
+          className="mb-16 md:mb-20 lg:mb-24"
         >
           <div className="group relative bg-white rounded-2xl overflow-hidden shadow-2xl hover:shadow-gold/20 transition-all duration-300">
             <div className="grid md:grid-cols-2 gap-0">
@@ -145,7 +145,7 @@ const Blog = () => {
         </motion.div>
 
         {/* Blog Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-14">
           {blogPosts.slice(1).map((post, index) => (
             <motion.article
               key={post.id}
@@ -208,7 +208,7 @@ const Blog = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="mt-16 text-center"
+          className="mt-20 md:mt-28 lg:mt-32 text-center"
         >
           <a
             href="#"

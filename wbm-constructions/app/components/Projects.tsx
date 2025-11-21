@@ -90,7 +90,7 @@ const Projects = () => {
     : projects.filter(project => project.category === filter);
 
   return (
-    <section id="projects" className="py-20 bg-gradient-to-b from-white via-gray-50 to-white">
+    <section id="projects" className="py-24 md:py-32 lg:py-40 bg-gradient-to-b from-white via-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -98,7 +98,7 @@ const Projects = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-12 md:mb-16 lg:mb-20"
         >
           <span className="inline-block px-4 py-2 bg-gold/10 border border-gold rounded-full text-gold font-semibold text-sm tracking-wider mb-4">
             OUR PORTFOLIO
@@ -117,17 +117,16 @@ const Projects = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="flex flex-wrap justify-center gap-4 mb-12"
+          className="flex flex-wrap justify-center gap-4 md:gap-5 mb-14 md:mb-16 lg:mb-20"
         >
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setFilter(category)}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
-                filter === category
-                  ? 'bg-gold text-dark shadow-lg shadow-gold/30'
-                  : 'bg-white text-black border-2 border-gray-200 hover:border-gold'
-              }`}
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${filter === category
+                ? 'bg-gold text-dark shadow-lg shadow-gold/30'
+                : 'bg-white text-black border-2 border-gray-200 hover:border-gold'
+                }`}
             >
               {category.charAt(0).toUpperCase() + category.slice(1)}
             </button>
@@ -142,7 +141,7 @@ const Projects = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-14"
           >
             {filteredProjects.map((project, index) => (
               <motion.div
@@ -194,7 +193,7 @@ const Projects = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="mt-16 text-center"
+          className="mt-20 md:mt-28 lg:mt-32 text-center"
         >
           <p className="text-lg text-black mb-6">
             Want to see more of our work?

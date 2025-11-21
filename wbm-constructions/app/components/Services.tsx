@@ -51,7 +51,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-b from-dark via-dark-light to-dark">
+    <section id="services" className="py-24 md:py-32 lg:py-40 bg-gradient-to-b from-dark via-dark-light to-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -59,12 +59,12 @@ const Services = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-16 md:mb-20 lg:mb-24"
         >
-          <span className="inline-block px-4 py-2 bg-gold/10 border border-gold rounded-full text-gold font-semibold text-sm tracking-wider mb-4">
+          <span className="inline-block px-4 py-2 bg-gold/10 border border-gold rounded-full text-gold font-semibold text-sm tracking-wider mb-6">
             OUR SERVICES
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Comprehensive Construction Solutions
           </h2>
           <p className="text-xl text-black-300 max-w-3xl mx-auto">
@@ -73,7 +73,7 @@ const Services = () => {
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-14">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -137,18 +137,18 @@ const Services = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="mt-16 text-center"
+          className="mt-20 md:mt-28 lg:mt-32 text-center"
         >
           <div className="bg-gradient-to-r from-gold via-gold-light to-gold p-12 rounded-2xl shadow-2xl">
-            <h3 className="text-3xl md:text-4xl font-bold text-dark mb-4">
+            <h3 className="text-3xl md:text-4xl font-bold text-dark mb-4 text-center">
               Ready to Start Your Project?
             </h3>
-            <p className="text-xl text-dark/80 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-dark/80 mb-8 max-w-2xl mx-auto text-center">
               Let's discuss how we can bring your vision to life with our expert construction services
             </p>
             <a
               href="#contact"
-              className="inline-block px-10 py-4 bg-dark hover:bg-dark-light text-black-500 font-bold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="inline-block px-10 py-4 bg-dark hover:bg-dark-light text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Request a Quote
             </a>

@@ -21,7 +21,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-white via-gray-50 to-white">
+    <section id="about" className="py-24 md:py-32 lg:py-40 bg-gradient-to-b from-white via-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -29,12 +29,12 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-16 md:mb-20 lg:mb-24"
         >
-          <span className="inline-block px-4 py-2 bg-gold/10 border border-gold rounded-full text-gold font-semibold text-sm tracking-wider mb-4">
+          <span className="inline-block px-4 py-2 bg-gold/10 border border-gold rounded-full text-gold font-semibold text-sm tracking-wider mb-6">
             ABOUT US
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-dark mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-dark mb-6">
             Building Dreams Since 1999
           </h2>
           <p className="text-xl text-black max-w-3xl mx-auto">
@@ -42,7 +42,7 @@ const About = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20 md:mb-24 lg:mb-28">
           {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -123,7 +123,7 @@ const About = () => {
               href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-block px-8 py-4 bg-dark hover:bg-gold text-black-500 hover:text-dark font-bold rounded-lg transition-all duration-300 shadow-lg"
+              className="inline-block px-8 py-4 bg-dark hover:bg-gold text-white hover:text-dark font-bold rounded-lg transition-all duration-300 shadow-lg"
             >
               Learn More About Us
             </motion.a>
@@ -136,7 +136,7 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="grid md:grid-cols-3 gap-8"
+          className="grid md:grid-cols-3 gap-6 md:gap-8 lg:gap-10"
         >
           {stats.map((stat, index) => (
             <motion.div
@@ -152,7 +152,7 @@ const About = () => {
                 {stat.icon}
               </div>
               <h4 className="text-4xl font-bold text-gold mb-2">{stat.number}</h4>
-              <p className="text-black-500 font-medium">{stat.label}</p>
+              <p className="text-white font-medium">{stat.label}</p>
             </motion.div>
           ))}
         </motion.div>

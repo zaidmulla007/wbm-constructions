@@ -45,7 +45,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative h-screen w-full overflow-hidden">
+    <section id="home" className="relative h-screen w-full overflow-hidden pt-20">
       <AnimatePresence mode="wait">
         <motion.div
           key={currentSlide}
@@ -67,7 +67,7 @@ const Hero = () => {
       </AnimatePresence>
 
       {/* Content */}
-      <div className="relative z-10 h-full flex items-center">
+      <div className="relative z-10 h-full flex items-center pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <AnimatePresence mode="wait">
             <motion.div
@@ -76,13 +76,13 @@ const Hero = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 100 }}
               transition={{ duration: 0.5 }}
-              className="max-w-3xl"
+              className="max-w-3xl ml-8 md:ml-16 lg:ml-24 xl:ml-32"
             >
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="mb-4"
+                className="mb-6"
               >
                 <span className="inline-block px-4 py-2 bg-gold/20 backdrop-blur-sm border border-gold rounded-full text-gold font-semibold text-sm tracking-wider">
                   WBM CONTRACTING L.L.C
@@ -93,7 +93,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="text-5xl md:text-7xl font-bold text-white mb-4 leading-tight"
+                className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
               >
                 {slides[currentSlide].title}
               </motion.h1>
@@ -102,7 +102,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="text-3xl md:text-4xl text-white font-semibold text-gold mb-6"
+                className="text-3xl md:text-4xl text-white font-semibold text-gold mb-8"
               >
                 {slides[currentSlide].subtitle}
               </motion.h2>
@@ -111,7 +111,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="text-xl text-white mb-8 max-w-2xl"
+                className="text-xl text-white mb-10 max-w-2xl"
               >
                 {slides[currentSlide].description}
               </motion.p>
@@ -120,7 +120,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
-                className="flex flex-col sm:flex-row gap-4"
+                className="flex flex-col sm:flex-row gap-5"
               >
                 <a
                   href="#contact"
@@ -160,11 +160,10 @@ const Hero = () => {
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide
                 ? 'bg-gold w-12'
                 : 'bg-white/50 hover:bg-white/80'
-            }`}
+              }`}
           />
         ))}
       </div>
