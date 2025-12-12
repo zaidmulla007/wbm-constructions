@@ -2,51 +2,74 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Building2, Home, Factory, Hammer, PaintBucket, Wrench } from 'lucide-react';
 
 const Services = () => {
   const services = [
     {
+      id: 1,
       icon: <Building2 className="w-12 h-12" />,
-      title: 'Commercial Construction',
-      description: 'High-quality commercial buildings designed for functionality and aesthetic appeal',
-      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80',
-      features: ['Office Buildings', 'Retail Spaces', 'Hotels & Resorts'],
-    },
-    {
-      icon: <Home className="w-12 h-12" />,
-      title: 'Residential Projects',
-      description: 'Luxury homes and residential complexes built with precision and care',
-      image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80',
-      features: ['Villas & Mansions', 'Apartments', 'Housing Communities'],
-    },
-    {
-      icon: <Factory className="w-12 h-12" />,
-      title: 'Industrial Facilities',
-      description: 'Robust industrial structures engineered for maximum efficiency',
-      image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80',
-      features: ['Warehouses', 'Manufacturing Plants', 'Storage Facilities'],
-    },
-    {
-      icon: <Hammer className="w-12 h-12" />,
-      title: 'Renovation & Remodeling',
-      description: 'Transform existing spaces with expert renovation and remodeling services',
+      title: 'Design & Build',
+      description: 'Our Design & Build service combines creativity and construction expertise into a single streamlined process',
       image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80',
-      features: ['Interior Renovation', 'Exterior Upgrades', 'Complete Makeovers'],
+      features: ['Initial Concept', 'Space Planning', 'Design Development', 'Execution & Handover'],
     },
     {
+      id: 2,
+      icon: <Building2 className="w-12 h-12" />,
+      title: 'Office Fit out',
+      description: 'We create functional, modern, and inspiring workspaces that enhance productivity and employee well-being',
+      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80',
+      features: ['Partitions & Ceilings', 'Flooring & MEP Works', 'Furniture Installation', 'Complete Interior Finishing'],
+    },
+    {
+      id: 3,
+      icon: <Home className="w-12 h-12" />,
+      title: 'Retail Fit out',
+      description: 'We design and build retail environments that attract customers and elevate the shopping experience',
+      image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80',
+      features: ['Display Units', 'Counters & Checkout', 'Lighting Design', 'Branding Elements'],
+    },
+    {
+      id: 4,
+      icon: <Hammer className="w-12 h-12" />,
+      title: 'Refurbishment',
+      description: 'Our refurbishment services upgrade and refresh existing spaces without disrupting daily operations',
+      image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80',
+      features: ['Layout Enhancement', 'Functionality Upgrade', 'Aesthetic Renewal', 'Performance Optimization'],
+    },
+    {
+      id: 5,
+      icon: <Factory className="w-12 h-12" />,
+      title: 'Furniture Solutions',
+      description: 'We supply and install high-quality office and retail furniture that blends comfort, style, and durability',
+      image: 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=600&q=80',
+      features: ['Modular Systems', 'Custom-Made Pieces', 'Ergonomic Design', 'Space Optimization'],
+    },
+    {
+      id: 6,
+      icon: <Wrench className="w-12 h-12" />,
+      title: 'Joinery Works',
+      description: 'Our in-house joinery team creates custom woodwork, cabinetry, counters, wall claddings, doors, and bespoke furniture',
+      image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=80',
+      features: ['Custom Cabinetry', 'Wall Claddings', 'Bespoke Furniture', 'High-Grade Materials'],
+    },
+    {
+      id: 7,
       icon: <PaintBucket className="w-12 h-12" />,
       title: 'Interior Design',
-      description: 'Custom interior solutions that reflect your style and vision',
+      description: 'Our interior design service transforms ideas into visually appealing, functional environments',
       image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=80',
-      features: ['Space Planning', 'Custom Furnishing', 'Décor Services'],
+      features: ['Mood Boards & Layouts', 'Material Selection', 'Color Palettes', '3D Visuals'],
     },
     {
-      icon: <Wrench className="w-12 h-12" />,
-      title: 'Maintenance Services',
-      description: 'Comprehensive maintenance to keep your property in perfect condition',
-      image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80',
-      features: ['Regular Inspections', 'Repairs & Fixes', 'Preventive Maintenance'],
+      id: 8,
+      icon: <Hammer className="w-12 h-12" />,
+      title: 'Renovation',
+      description: 'Whether it\'s restructuring a layout or updating finishes, our renovation services revitalize spaces with minimal downtime',
+      image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80',
+      features: ['Civil Works', 'Electrical Upgrades', 'Partition Changes', 'Flooring & Painting'],
     },
   ];
 
@@ -65,10 +88,10 @@ const Services = () => {
             OUR SERVICES
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Comprehensive Construction Solutions
+            Complete Interior Solutions
           </h2>
           <p className="text-xl text-white max-w-3xl mx-auto">
-            From concept to completion, we offer a full range of construction services tailored to your needs
+            From concept to completion, we deliver complete interior solutions tailored to meet the needs of commercial, retail, and office spaces
           </p>
         </motion.div>
 
@@ -84,49 +107,50 @@ const Services = () => {
               whileHover={{ y: -10 }}
               className="group relative bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-gold/20 transition-all duration-300"
             >
-              {/* Image */}
-              <div className="relative h-48 overflow-hidden">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent" />
+              <Link href={`/services/${service.id}`} className="block h-full">
+                {/* Image */}
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent" />
 
-                {/* Icon */}
-                <div className="absolute bottom-4 left-4 w-16 h-16 bg-gold rounded-full flex items-center justify-center text-dark shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  {service.icon}
+                  {/* Icon */}
+                  <div className="absolute bottom-4 left-4 w-16 h-16 bg-gold rounded-full flex items-center justify-center text-dark shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    {service.icon}
+                  </div>
                 </div>
-              </div>
 
-              {/* Content */}
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-dark mb-3 group-hover:text-gold transition-colors duration-300">
-                  {service.title}
-                </h3>
-                <p className="text-black mb-4 leading-relaxed">
-                  {service.description}
-                </p>
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-dark mb-3 group-hover:text-gold transition-colors duration-300">
+                    {service.title}
+                  </h3>
+                  <p className="text-black mb-4 leading-relaxed">
+                    {service.description}
+                  </p>
 
-                {/* Features */}
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-black">
-                      <span className="w-2 h-2 bg-gold rounded-full mr-3"></span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                  {/* Features */}
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-black">
+                        <span className="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
 
-                {/* Button */}
-                <button className="w-full py-3 bg-dark text-white font-semibold rounded-lg group-hover:bg-gold group-hover:text-dark transition-all duration-300 transform group-hover:scale-105">
-                  Learn More
-                </button>
-              </div>
-
-              {/* Decorative Element */}
-              <div className="absolute top-0 right-0 w-20 h-20 bg-gold/10 rounded-bl-full transform translate-x-10 -translate-y-10 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-500"></div>
+                  {/* Button */}
+                  <div className="block">
+                    <span className="inline-block w-full text-center py-3 bg-dark text-white font-semibold rounded-lg group-hover:bg-gold group-hover:text-dark transition-all duration-300 transform group-hover:scale-105">
+                      Explore More
+                    </span>
+                  </div>
+                </div>
+              </Link>
             </motion.div>
           ))}
         </div>
@@ -146,12 +170,12 @@ const Services = () => {
             <p className="text-xl text-dark/80 mb-8 max-w-2xl mx-auto text-center">
               Let's discuss how we can bring your vision to life with our expert construction services
             </p>
-            <a
-              href="#contact"
+            <Link
+              href="/contact"
               className="inline-block px-10 py-4 bg-dark hover:bg-dark-light text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Request a Quote
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>

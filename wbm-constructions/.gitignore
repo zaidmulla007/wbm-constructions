@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# php mailer config (contains sensitive credentials)
+/public/api/config.php
