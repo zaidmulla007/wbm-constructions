@@ -1,10 +1,10 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ReactNode } from 'react';
+import { ReactNode, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeft, CheckCircle } from 'lucide-react';
+import { ArrowLeft, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Service {
     id: number;
@@ -18,6 +18,49 @@ interface Service {
 }
 
 export default function ServiceContent({ service }: { service: Service }) {
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    // Gallery images for Interior Design service (id: 7)
+    const galleryImages = service.id === 7 ? [
+        '/interior-design/JPJ-004.jpeg',
+        '/interior-design/JPJ-005.jpeg',
+        '/interior-design/JPJ-006.jpeg',
+        '/interior-design/JPJ-007.jpeg',
+        '/interior-design/JPJ-008.jpeg',
+        '/interior-design/JPJ-009.jpeg',
+        '/interior-design/JPJ-010.jpeg',
+        '/interior-design/JPJ-011.jpeg',
+        '/interior-design/JPJ-012.jpeg',
+        '/interior-design/JPJ-013.jpeg',
+        '/interior-design/JPJ-014.jpeg',
+        '/interior-design/JPJ-015.jpeg',
+    ] : [];
+
+    // Auto-scroll effect - every 5 seconds
+    useEffect(() => {
+        if (galleryImages.length === 0) return;
+
+        const interval = setInterval(() => {
+            setCurrentImageIndex((prevIndex) =>
+                prevIndex === galleryImages.length - 1 ? 0 : prevIndex + 1
+            );
+        }, 5000); // 5 seconds
+
+        return () => clearInterval(interval);
+    }, [galleryImages.length]);
+
+    const handlePrevious = () => {
+        setCurrentImageIndex((prevIndex) =>
+            prevIndex === 0 ? galleryImages.length - 1 : prevIndex - 1
+        );
+    };
+
+    const handleNext = () => {
+        setCurrentImageIndex((prevIndex) =>
+            prevIndex === galleryImages.length - 1 ? 0 : prevIndex + 1
+        );
+    };
+
     return (
         <>
             {/* Hero Banner with Service Image */}
@@ -137,6 +180,80 @@ export default function ServiceContent({ service }: { service: Service }) {
                             </ul>
                         </div>
                     </motion.div>
+
+                    {/* Gallery Section - Only for Interior Design */}
+                    {galleryImages.length > 0 && (
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="mb-16 -mx-4 sm:-mx-6 lg:-mx-8"
+                        >
+                            <div className="px-4 sm:px-6 lg:px-8">
+                                <h2 className="text-3xl md:text-4xl font-bold text-dark mb-6">Gallery</h2>
+                            </div>
+                            <div className="relative bg-white p-4 rounded-xl shadow-lg mx-4 sm:mx-6 lg:mx-8">
+                                {/* Image Container */}
+                                <div className="overflow-hidden rounded-lg">
+                                    <div
+                                        className="flex transition-transform duration-700 ease-in-out"
+                                        style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
+                                    >
+                                        {galleryImages.map((image, index) => (
+                                            <div key={index} className="min-w-full flex-shrink-0">
+                                                <div className="relative w-full h-[300px] md:h-[400px] bg-gray-100">
+                                                    <Image
+                                                        src={image}
+                                                        alt={`Interior Design Project ${index + 1}`}
+                                                        fill
+                                                        className="object-contain rounded-lg"
+                                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+                                                    />
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {/* Navigation Buttons */}
+                                <button
+                                    onClick={handlePrevious}
+                                    className="absolute left-4 md:left-8 top-[calc(150px)] md:top-[calc(200px)] -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-gold/90 hover:bg-gold rounded-full flex items-center justify-center text-dark shadow-lg transition-all duration-300 hover:scale-110 z-10"
+                                    aria-label="Previous image"
+                                >
+                                    <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
+                                </button>
+                                <button
+                                    onClick={handleNext}
+                                    className="absolute right-4 md:right-8 top-[calc(150px)] md:top-[calc(200px)] -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-gold/90 hover:bg-gold rounded-full flex items-center justify-center text-dark shadow-lg transition-all duration-300 hover:scale-110 z-10"
+                                    aria-label="Next image"
+                                >
+                                    <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
+                                </button>
+
+                                {/* Dots Indicator */}
+                                <div className="flex justify-center gap-2 mt-6">
+                                    {galleryImages.map((_, index) => (
+                                        <button
+                                            key={index}
+                                            onClick={() => setCurrentImageIndex(index)}
+                                            className={`transition-all duration-300 rounded-full ${
+                                                index === currentImageIndex
+                                                    ? 'w-8 h-3 bg-gold'
+                                                    : 'w-3 h-3 bg-gray-300 hover:bg-gray-400'
+                                            }`}
+                                            aria-label={`Go to image ${index + 1}`}
+                                        />
+                                    ))}
+                                </div>
+
+                                {/* Image Counter */}
+                                <div className="text-center mt-4 text-black font-semibold">
+                                    {currentImageIndex + 1} / {galleryImages.length}
+                                </div>
+                            </div>
+                        </motion.div>
+                    )}
 
                     {/* CTA Section */}
                     <motion.div

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Clock, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Clock, Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import FloatingActions from '../components/FloatingActions';
@@ -97,8 +97,8 @@ const ContactPage = () => {
     {
       icon: <Phone className="w-6 h-6" />,
       title: 'Phone',
-      content: '04-886 3085',
-      link: 'tel:048863085',
+      content: '+971 55 339 6704 / +971 56 666 9304',
+      link: 'tel:+971553396704',
     },
     {
       icon: <Mail className="w-6 h-6" />,
@@ -121,9 +121,24 @@ const ContactPage = () => {
   ];
 
   const socialLinks = [
-    { icon: <Facebook className="w-5 h-5" />, link: '#', name: 'Facebook' },
-    { icon: <Instagram className="w-5 h-5" />, link: '#', name: 'Instagram' },
-    { icon: <Linkedin className="w-5 h-5" />, link: '#', name: 'LinkedIn' },
+    { icon: <Instagram className="w-5 h-5" />, link: 'https://instagram.com', name: 'Instagram' },
+    { icon: <Facebook className="w-5 h-5" />, link: 'https://facebook.com', name: 'Facebook' },
+    {
+      icon: (
+        <svg
+          className="w-5 h-5"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+        </svg>
+      ),
+      link: 'https://tiktok.com',
+      name: 'TikTok'
+    },
+    { icon: <Youtube className="w-5 h-5" />, link: 'https://youtube.com', name: 'YouTube' },
+    { icon: <Linkedin className="w-5 h-5" />, link: 'https://linkedin.com', name: 'LinkedIn' },
   ];
 
   return (

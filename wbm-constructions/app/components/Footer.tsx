@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Mail, Phone, MapPin, Facebook, Instagram, ArrowUp } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Instagram, ArrowUp, Youtube, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -47,6 +47,8 @@ const Footer = () => {
       link: 'https://tiktok.com',
       name: 'TikTok'
     },
+    { icon: <Youtube className="w-5 h-5" />, link: 'https://youtube.com', name: 'YouTube' },
+    { icon: <Linkedin className="w-5 h-5" />, link: 'https://linkedin.com', name: 'LinkedIn' },
   ];
 
   return (
@@ -151,11 +153,11 @@ const Footer = () => {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="tel:048863085"
+                  href="tel:+971553396704"
                   className="flex items-start gap-3 text-black hover:text-gold transition-colors duration-300 group"
                 >
                   <Phone className="w-5 h-5 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
-                  <span>04-886 3085</span>
+                  <span>+971 55 339 6704<br />+971 56 666 9304</span>
                 </a>
               </li>
               <li>

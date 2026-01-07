@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Clock, Facebook, Instagram, X } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Clock, Facebook, Instagram, X, Youtube, Linkedin } from 'lucide-react';
 import Swal from 'sweetalert2';
 
 const Contact = () => {
@@ -101,8 +101,8 @@ const Contact = () => {
     {
       icon: <Phone className="w-6 h-6" />,
       title: 'Phone',
-      content: '04-886 3085',
-      link: 'tel:048863085',
+      content: '+971 55 339 6704 / +971 56 666 9304',
+      link: 'tel:+971553396704',
     },
     {
       icon: <Mail className="w-6 h-6" />,
@@ -141,6 +141,8 @@ const Contact = () => {
       link: 'https://tiktok.com',
       name: 'TikTok'
     },
+    { icon: <Youtube className="w-5 h-5" />, link: 'https://youtube.com', name: 'YouTube' },
+    { icon: <Linkedin className="w-5 h-5" />, link: 'https://linkedin.com', name: 'LinkedIn' },
   ];
 
   // Function to expose modal control globally

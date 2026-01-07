@@ -48,7 +48,7 @@ const FloatingActions = () => {
       <div className="fixed bottom-4 right-2 sm:right-4 z-50 flex flex-col gap-3 sm:gap-4">
         {/* Call Button */}
         <motion.a
-          href="tel:+918123091644"
+          href="tel:+971553396704"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           className="w-12 h-12 sm:w-14 sm:h-14 bg-gold hover:bg-gold-dark rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 group"
@@ -70,7 +70,7 @@ const FloatingActions = () => {
 
         {/* WhatsApp Button */}
         <motion.a
-          href="https://wa.me/918123091644?text=Hello!%20I%20want%20to%20know%20more%20about%20your%20services.%20Please%20call%20me%20back.%20Thanks"
+          href="https://wa.me/971566669304?text=Hello!%20I%20want%20to%20know%20more%20about%20your%20services.%20Please%20call%20me%20back.%20Thanks"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.1 }}
