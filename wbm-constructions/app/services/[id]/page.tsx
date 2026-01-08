@@ -44,7 +44,7 @@ const services = [
         icon: <Home className="w-12 h-12" />,
         title: 'Retail Fit out',
         description: 'We design and build retail environments that attract customers and elevate the shopping experience',
-        image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80',
+        image: '/services/retail.jpeg',
         features: ['Display Units', 'Counters & Checkout', 'Lighting Design', 'Branding Elements'],
         detailedDescription: 'Create captivating retail spaces that drive customer engagement and sales. Our retail fit-out services focus on optimizing the customer journey, showcasing products effectively, and creating memorable brand experiences.',
         benefits: [
@@ -60,7 +60,7 @@ const services = [
         icon: <Hammer className="w-12 h-12" />,
         title: 'Refurbishment',
         description: 'Our refurbishment services upgrade and refresh existing spaces without disrupting daily operations',
-        image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80',
+        image: '/services/refurb.jpeg',
         features: ['Layout Enhancement', 'Functionality Upgrade', 'Aesthetic Renewal', 'Performance Optimization'],
         detailedDescription: 'Breathe new life into existing spaces with our expert refurbishment services. We specialize in upgrading and modernizing interiors while minimizing disruption to your ongoing operations.',
         benefits: [

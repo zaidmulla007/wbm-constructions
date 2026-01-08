@@ -28,7 +28,7 @@ const Services = () => {
       icon: <Home className="w-12 h-12" />,
       title: 'Retail Fit out',
       description: 'We design and build retail environments that attract customers and elevate the shopping experience',
-      image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80',
+      image: '/services/retail.jpeg',
       features: ['Display Units', 'Counters & Checkout', 'Lighting Design', 'Branding Elements'],
     },
     {
@@ -36,7 +36,7 @@ const Services = () => {
       icon: <Hammer className="w-12 h-12" />,
       title: 'Refurbishment',
       description: 'Our refurbishment services upgrade and refresh existing spaces without disrupting daily operations',
-      image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80',
+      image: '/services/refurb.jpeg',
       features: ['Layout Enhancement', 'Functionality Upgrade', 'Aesthetic Renewal', 'Performance Optimization'],
     },
     {
